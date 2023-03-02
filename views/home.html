@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Moment Photography</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<!--Body Section-->
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/home">Capture Moments</a>
+        </div>
+
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/home">HOME</a></li>
+                <li><a href="/packages">Packages</a></li>
+                <li><a href="/connect">Connect</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="responsive-fluid" >
+    <img src="/images/background_image.jpg" id = "background-img" class="img-responsive" alt="camera" ><br>
+</div>
+
+<div id="about" class="container text-center">
+    <h3>ABOUT US</h3>
+    <p>The idea of colours floating across a sheet of paper forming either familiar shapesmet
+        or new creations is appealing to the eye. In reality, though it is much more than
+        just the beads of colour. Photography can capture someone’s heart and soul.
+        Even the simplest photo has a story that tails along with it.
+        It is an escape from the real world; a creation that narrows on one particular subject
+        and carefully details their every move and emotion. given this <Strong>Captured Moments</Strong>
+        was establish by group of student with the mission to keep families and friends connected with
+        their beautiful memories from the past</p>
+</div>
+
+<!-- Container (Contact Section) -->
+<form id="contact" class="container" method="post" action="#">
+    <h3 class="text-center">Contact</h3>
+    <p class="text-center"><em>We love our fans!</em></p>
+
+    <div class="row">
+        <div class="col-md-4">
+            <p>Fan? Drop a note.</p>
+            <p><span class="glyphicon glyphicon-map-marker"></span>Washington, US</p>
+            <p><span class="glyphicon glyphicon-phone"></span>Phone: +206-666-6666</p>
+            <p><span class="glyphicon glyphicon-envelope"></span>Email: nayaz@mail.greenriver.edu</p>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-sm-6 form-group">
+                    <input class="form-control" id="name" name="name" placeholder="Name" >
+                    <check if="{{ isset(@errors['name']) }}">
+                        {{ @errors['name'] }}
+                    </check>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <input class="form-control" id="email" name="email" placeholder="Email" >
+                    <check if="{{ isset(@errors['email']) }}">
+                        {{ @errors['email'] }}
+                    </check>
+                </div>
+            </div>
+            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+            <check if="{{ isset(@errors['comments']) }}">
+                {{ @errors['comments'] }}
+            </check>
+            <br>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <button class="btn pull-right" type="submit">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- Footer -->
+<footer class="text-center">
+    <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a><br><br>
+    <a class="text-right pt-1" href="admin">Admin</a>
+    <div class="row">
+        <div class="col-md-12 copy">
+            <p class="text-center">&copy; Copyright 2021 - Capture Moments.  All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

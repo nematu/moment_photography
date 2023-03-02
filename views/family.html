@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Moment Photography</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<!--Body Section-->
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="home">Capture Moments</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="home">HOME</a></li>
+                <li><a href="packages">Packages</a></li>
+                <li><a href="connect">Connect</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="responsive">
+<form class="family-form"  method="post" action="#">
+    <div class="container bg-warning "  ><br>
+
+        <fieldset class="form-group border ">
+            <H3 class="text-center">Family Order Form</H3><br>
+            <div class="form-group col-md-6">
+                <label for="size">Number of people attending: </label><br>
+                <input  type="text" id="size" name="size">
+                <check if="{{ isset(@errors['size']) }}">
+                    {{ @errors['size'] }}
+                </check>
+            </div>
+        </fieldset>
+        <fieldset class="form-group border ">
+            <div class="form-group col-md-6">
+                <label for="hours">How many hours would you like to book: </label>
+                <input  type="text" id="hours" name="hours">
+                <check if="{{ isset(@errors['hours']) }}">
+                    {{ @errors['hours'] }}
+                </check>
+            </div>
+        </fieldset>
+
+        <!-- Submit Button-->
+        <div class="text-right">
+            <button type="submit" class="btn btn-light border ">SUBMIT</button>
+        </div>
+    </div>
+</form>
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+    <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a><br><br>
+    <div class="row">
+        <div class="col-md-12 copy">
+            <p class="text-center">&copy; Copyright 2021 - Capture Moments.  All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

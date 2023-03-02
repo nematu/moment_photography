@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Moment Photography</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<!--Body Section-->
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="home">Capture Moments</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="home">HOME</a></li>
+                <li><a href="packages">Packages</a></li>
+                <li><a href="connect">Connect</a></li>
+            </ul>
+        </div>
+    </div>
+</nav><br>
+
+<!--Displaying all Customer's info-->
+<div class="summary">
+<div class="container bg-warning "  ><br>
+    <fieldset class="border p-3">
+        <H3 class="text-center">Summary</H3>
+        <div class="container">
+            Name: {{ @SESSION.customer->getFname() }} {{ @SESSION.customer->getLname() }}<br>
+            Phone Number: {{ @SESSION.customer->getPhone() }}<br>
+            E-mail: {{ @SESSION.customer->getEmail() }}<br>
+            Location: {{ @SESSION.customer->getState() }}<br>
+            Package: {{ @SESSION.customer->getPackageName() }}<br>
+            <check if="{{ @SESSION.customer->getPackageName() == 'Family Package'}}">
+                Family Size: {{ @SESSION.package->getPeopleAmount() }} <br>
+                Hours: {{ @SESSION.package->getMinutes() }}
+            </check>
+        </div>
+    </fieldset>
+</div><br>
+</div>
+<!-- Footer -->
+<footer class="text-center">
+    <a class="up-arrow" href="summary" data-toggle="tooltip" title="TO TOP">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a><br><br>
+    <a class="text-right pt-1" href="admin">Admin</a>
+    <div class="row">
+        <div class="col-md-12 copy">
+            <p class="text-center">&copy; Copyright 2021 - Capture Moments.  All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
