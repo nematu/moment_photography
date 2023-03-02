@@ -1,0 +1,12 @@
+{
+  "name": "nayaz.net/moment_photography",
+  "authors": [
+    {
+      "name": "nayaznet",
+      "email": "nematullah.ayaz@gmail.com"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
